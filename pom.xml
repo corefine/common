@@ -35,5 +35,6 @@
         <module>common-web</module>
         <module>common-web-mvc</module>
         <module>common-web-websocket</module>
+        <module>common-wx</module>
     </modules>
 </project>

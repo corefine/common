@@ -13,7 +13,7 @@
     <dependencies>
         <dependency>
             <groupId>org.corefine.common</groupId>
-            <artifactId>common-common</artifactId>
+            <artifactId>common-web</artifactId>
         </dependency>
     </dependencies>
 </project>

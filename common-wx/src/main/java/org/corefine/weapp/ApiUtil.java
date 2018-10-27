@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 
-import org.corefine.common.web.common.service.ServiceException;
+import org.corefine.common.web.service.ServiceException;
 import org.corefine.weapp.result.Jscode2SessionResult;
 import org.corefine.weapp.result.WeappErrorResult;
 import org.slf4j.Logger;
