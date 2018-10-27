@@ -1,5 +1,6 @@
 package org.corefine.common.web.mvc;
 
+import org.corefine.common.web.constant.CodeConstant;
 import org.corefine.common.web.vo.DataVo;
 import org.corefine.common.web.vo.MessageVo;
 import org.corefine.common.web.vo.StatusVo;

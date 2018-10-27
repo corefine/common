@@ -16,6 +16,16 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>9</java.version>
     </properties>
+    <distributionManagement>
+        <repository>
+            <id>rdc-releases</id>
+            <url>https://repo.rdc.aliyun.com/repository/21778-release-sqMikb/</url>
+        </repository>
+        <snapshotRepository>
+            <id>rdc-snapshots</id>
+            <url>https://repo.rdc.aliyun.com/repository/21778-snapshot-6FnEqX/</url>
+        </snapshotRepository>
+    </distributionManagement>
     <modules>
         <module>common-parent</module>
         <module>common-core</module>
@@ -24,5 +34,6 @@
         <module>common-util</module>
         <module>common-web</module>
         <module>common-web-mvc</module>
+        <module>common-web-websocket</module>
     </modules>
 </project>
