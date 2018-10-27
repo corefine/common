@@ -24,5 +24,22 @@ public interface CacheKey {
     int MONTH_2 = MONTH_1 * 2;
     int MONTH_3 = MONTH_1 * 3;
 
-    String key();
+    String cacheName();
+
+    int expireTime();
+
+    default String key() {
+        return cacheName();
+    }
+
+    default String key(Object... params) {
+        StringBuilder key = new StringBuilder(cacheName());
+        if (params != null && params.length > 0) {
+            for (Object param : params) {
+                key.append(':');
+                key.append(String.valueOf(param));
+            }
+        }
+        return key.toString();
+    }
 }
