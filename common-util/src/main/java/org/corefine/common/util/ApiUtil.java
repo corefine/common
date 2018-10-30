@@ -29,6 +29,7 @@ import org.slf4j.LoggerFactory;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -167,6 +168,7 @@ public class ApiUtil {
 
     public static <T> T request(String method, String uri, Map<String, String> headers, ApiRequest apiRequest, ApiResponse<T> apiResponse) {
         HttpUriRequestImpl httpRequest = new HttpUriRequestImpl(method);
+        httpRequest.setURI(URI.create(uri));
         if (headers != null) {
             headers.forEach(httpRequest::setHeader);
         }
