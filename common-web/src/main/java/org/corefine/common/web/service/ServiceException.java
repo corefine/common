@@ -10,14 +10,20 @@ public class ServiceException extends RuntimeException {
     private final String message;
 
     public ServiceException() {
-        this(CodeConstant.SERVICE_ERROR, "服务异常");
+        this(CodeConstant.SERVICE_ERROR, "服务异常", null);
     }
 
     public ServiceException(String message) {
-        this(CodeConstant.SERVICE_ERROR, message);
+        this(CodeConstant.SERVICE_ERROR, message, null);
     }
 
-    public ServiceException(int code, String message) {
+    public ServiceException(String message, Throwable throwable) {
+        this(CodeConstant.SERVICE_ERROR, message, throwable);
+    }
+
+
+    public ServiceException(int code, String message, Throwable throwable) {
+        super(throwable);
         this.code = code;
         this.message = message;
     }

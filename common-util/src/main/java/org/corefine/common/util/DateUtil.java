@@ -31,6 +31,8 @@ public class DateUtil {
     public static final String MINUTE_PATTERN = "HH:mm";
     /** 年月格式：yyyy-MM */
     public static final String MONTH_PATTERN = "yyyy-MM";
+    /** 年月格式：yyyy-MM */
+    public static final String CHINA_MONTH_PATTERN = "yyyy年MM月";
 
     /** 短年月日时分秒格式：yyyyMMddHHmmss */
     public static final String YYYYMMDDHHMMSS_PATTERN = "yyyyMMddHHmmss";
