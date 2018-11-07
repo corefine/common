@@ -21,6 +21,9 @@ public class ServiceException extends RuntimeException {
         this(CodeConstant.SERVICE_ERROR, message, throwable);
     }
 
+    public ServiceException(int code, String message) {
+        this(code, message, null);
+    }
 
     public ServiceException(int code, String message, Throwable throwable) {
         super(throwable);
