@@ -27,7 +27,7 @@ public interface CRUDMapper<Entity> {
      * 查询（根据 columnMap 条件）
      *
      * @param columnMap 表字段 map 对象
-     * @return Collection<T>
+     * @return 结果集合
      */
     List<Entity> selectByMap(@Param("cm") Map<String, Object> columnMap);
 

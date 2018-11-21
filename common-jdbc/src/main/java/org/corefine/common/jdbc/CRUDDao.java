@@ -131,6 +131,7 @@ public abstract class CRUDDao<Mapper extends CRUDMapper<Entity>, Entity extends 
 
     /**
      * 批量删除
+     * @param ids ids
      */
     @Transactional
     public void deleteBatch(Collection<Long> ids) {
@@ -172,7 +173,7 @@ public abstract class CRUDDao<Mapper extends CRUDMapper<Entity>, Entity extends 
      * 查询（根据 columnMap 条件）
      *
      * @param columnMap 表字段 map 对象
-     * @return Collection<T>
+     * @return 结果集合
      */
     public List<Entity> selectByMap(@Param("cm") Map<String, Object> columnMap) {
         return this.mapper.selectByMap(columnMap);
