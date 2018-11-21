@@ -35,12 +35,12 @@
     </build>
     <distributionManagement>
         <repository>
-            <id>rdc-releases</id>
-            <url>https://repo.rdc.aliyun.com/repository/21778-release-sqMikb/</url>
+            <id>sonatype-releases</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </repository>
         <snapshotRepository>
-            <id>rdc-snapshots</id>
-            <url>https://repo.rdc.aliyun.com/repository/21778-snapshot-6FnEqX/</url>
+            <id>sonatype-snapshots</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
         </snapshotRepository>
     </distributionManagement>
     <modules>
