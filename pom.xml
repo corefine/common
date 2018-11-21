@@ -35,10 +35,10 @@
     </build>
 	<scm>
         <connection>
-            scm:git:https://github.com/fe19880924/common.git
+            scm:git:git@github.com:fe19880924/common.git
         </connection>
         <developerConnection>
-            scm:git:https://github.com/fe19880924/common.git
+            scm:git:git@github.com:fe19880924/common.git
         </developerConnection>
         <url>https://github.com/fe19880924/common</url>
     </scm>
