@@ -14,7 +14,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>9</java.version>
+        <java.version>8</java.version>
     </properties>
     <build>
         <plugins>
@@ -33,14 +33,23 @@
             </plugin>
         </plugins>
     </build>
+	<scm>
+        <connection>
+            scm:git:https://github.com/fe19880924/common.git
+        </connection>
+        <developerConnection>
+            scm:git:https://github.com/fe19880924/common.git
+        </developerConnection>
+        <url>https://github.com/fe19880924/common</url>
+    </scm>
     <distributionManagement>
         <repository>
             <id>sonatype-releases</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
         </repository>
         <snapshotRepository>
             <id>sonatype-snapshots</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
     <modules>
