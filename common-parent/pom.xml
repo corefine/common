@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.corefine.common</groupId>
         <artifactId>common</artifactId>
-        <version>1.2.1</version>
+        <version>1.2.2-SNAPSHOT</version>
     </parent>
 
     <properties>
@@ -22,12 +22,12 @@
             <dependency>
                 <groupId>org.corefine.common</groupId>
                 <artifactId>common-core</artifactId>
-                <version>1.2.1</version>
+                <version>1.2.2-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>org.corefine.common</groupId>
                 <artifactId>common-wx</artifactId>
-                <version>1.2.1</version>
+                <version>1.2.2-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>org.corefine.common</groupId>
@@ -37,7 +37,7 @@
             <dependency>
                 <groupId>org.corefine.common</groupId>
                 <artifactId>common-web</artifactId>
-                <version>1.2.1</version>
+                <version>1.2.2-SNAPSHOT</version>
             </dependency>
 
             <!-- jdbc -->
