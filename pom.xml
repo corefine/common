@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.corefine.common</groupId>
     <artifactId>common</artifactId>
-    <version>1.4-SNAPSHOT</version>
+    <version>1.4</version>
     <packaging>pom</packaging>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -32,7 +32,7 @@
             scm:git:git@github.com:fe19880924/common.git
         </developerConnection>
         <url>https://github.com/fe19880924/common</url>
-        <tag>HEAD</tag>
+        <tag>common-1.4</tag>
     </scm>
     <distributionManagement>
         <repository>
