@@ -38,6 +38,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>8</java.version>
+        <gpg.homedir>e:/git_github/gpg</gpg.homedir>
     </properties>
     <build>
         <plugins>
@@ -64,6 +65,7 @@
                         </goals>
                         <configuration>
                             <executable>gpg</executable>
+                            <homedir>${gpg.homedir}</homedir>
                         </configuration>
                     </execution>
                 </executions>
