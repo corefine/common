@@ -4,7 +4,7 @@
     <groupId>org.corefine.common</groupId>
     <artifactId>common</artifactId>
     <name>一个工具集合</name>
-    <version>1.4.5-SNAPSHOT</version>
+    <version>1.4.4-SNAPSHOT</version>
     <packaging>pom</packaging>
     <licenses>
         <license>
