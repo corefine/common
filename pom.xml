@@ -4,7 +4,7 @@
     <groupId>org.corefine.common</groupId>
     <artifactId>common</artifactId>
     <name>Common Tool</name>
-    <version>1.4.7</version>
+    <version>1.4.8-SNAPSHOT</version>
     <packaging>pom</packaging>
     <licenses>
         <license>
@@ -26,7 +26,7 @@
             scm:git:git@github.com:fe19880924/common.git
         </developerConnection>
         <url>https://github.com/fe19880924/common</url>
-        <tag>common-1.4.7</tag>
+        <tag>HEAD</tag>
     </scm>
     <parent>
         <groupId>org.springframework.boot</groupId>
