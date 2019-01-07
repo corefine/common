@@ -10,7 +10,6 @@
         <relativePath>../common-parent</relativePath>
     </parent>
     <properties>
-        <feign.version>10.1.0</feign.version>
     </properties>
     <dependencies>
         <dependency>
@@ -20,12 +19,10 @@
         <dependency>
             <groupId>io.github.openfeign</groupId>
             <artifactId>feign-jackson</artifactId>
-            <version>${feign.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.openfeign</groupId>
             <artifactId>feign-slf4j</artifactId>
-            <version>${feign.version}</version>
         </dependency>
     </dependencies>
 </project>
