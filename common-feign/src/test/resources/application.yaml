@@ -1,0 +1,6 @@
+feign:
+  github: https://api.github.com
+
+logging:
+  level:
+    feign: debug
