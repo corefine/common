@@ -1,5 +1,7 @@
 package org.corefine.common.feign;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.context.EnvironmentAware;
@@ -8,12 +10,14 @@ import org.springframework.util.StringUtils;
 
 import feign.Feign;
 import feign.jackson.JacksonDecoder;
+import feign.jackson.JacksonEncoder;
 import feign.slf4j.Slf4jLogger;
 
 public class FeignClientFactoryBean<T> implements FactoryBean<T>, EnvironmentAware {
     private String name;
     private Class<T> clientInterface;
     private Environment environment;
+    private ObjectMapper objectMapper;
 
     public FeignClientFactoryBean() {
     }
@@ -29,7 +33,16 @@ public class FeignClientFactoryBean<T> implements FactoryBean<T>, EnvironmentAwa
         if (!StringUtils.hasText(url)) {
             throw new BeanCreationException(propertyName + "未正确配置");
         }
-        return Feign.builder().logger(new Slf4jLogger()).decoder(new JacksonDecoder()).target(clientInterface, url);
+        return builder(clientInterface, url);
+    }
+
+
+    private <Instance> Instance builder(Class<Instance> clientInterface, String url) {
+        return Feign.builder()
+                .logger(new Slf4jLogger())
+                .encoder(new JacksonEncoder(objectMapper))
+                .decoder(new JacksonDecoder(objectMapper))
+                .target(clientInterface, url);
     }
 
     @Override
@@ -48,5 +61,9 @@ public class FeignClientFactoryBean<T> implements FactoryBean<T>, EnvironmentAwa
 
     public void setClientInterface(Class<T> clientInterface) {
         this.clientInterface = clientInterface;
+    }
+
+    public void setObjectMapper(ObjectMapper objectMapper) {
+        this.objectMapper = objectMapper;
     }
 }
