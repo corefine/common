@@ -2,6 +2,8 @@ package org.corefine.common.feign;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.context.EnvironmentAware;
@@ -14,6 +16,7 @@ import feign.jackson.JacksonEncoder;
 import feign.slf4j.Slf4jLogger;
 
 public class FeignClientFactoryBean<T> implements FactoryBean<T>, EnvironmentAware {
+    private final Logger logger = LoggerFactory.getLogger(getClass());
     private String name;
     private Class<T> clientInterface;
     private Environment environment;
@@ -27,13 +30,17 @@ public class FeignClientFactoryBean<T> implements FactoryBean<T>, EnvironmentAwa
     }
 
     @Override
-    public T getObject() throws Exception {
+    public T getObject() {
         String propertyName = "feign." + name;
         String url = environment.getProperty(propertyName);
         if (!StringUtils.hasText(url)) {
             throw new BeanCreationException(propertyName + "未正确配置");
         }
-        return builder(clientInterface, url);
+        T t = builder(clientInterface, url);
+        if (logger.isInfoEnabled()) {
+            logger.info("create feign instance {}, config {}, url {}", clientInterface.getName(), name, url);
+        }
+        return t;
     }
 
 
