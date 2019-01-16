@@ -1,6 +1,13 @@
 feign:
   github: https://api.github.com
 
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
 logging:
   level:
+    root: info
     feign: debug
+    org.corefine: debug
