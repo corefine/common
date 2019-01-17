@@ -1,7 +1,5 @@
 //package org.corefine.common.cache.redis;
 //
-//import com.fclassroom.common.cache.CacheException;
-//import com.fclassroom.common.cache.CacheHandler;
 //
 //import org.ehcache.Cache;
 //import org.ehcache.CacheManager;

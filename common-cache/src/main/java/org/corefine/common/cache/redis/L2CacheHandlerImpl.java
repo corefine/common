@@ -1,8 +1,5 @@
 //package org.corefine.common.cache.redis;
 //
-//import com.fclassroom.common.cache.CacheData;
-//import com.fclassroom.common.cache.L2CacheHandler;
-//
 //import redis.clients.jedis.JedisPubSub;
 //
 //public class L2CacheHandlerImpl extends RedisCacheHandlerImpl implements L2CacheHandler {
