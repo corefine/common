@@ -2,8 +2,12 @@ package org.corefine.common.cache;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 
+import org.corefine.common.cache.redis.RedisCaller;
+import org.corefine.common.cache.redis.RedisRunner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import redis.clients.jedis.Jedis;
 
 import java.util.List;
 import java.util.Map;
@@ -21,6 +25,17 @@ public interface CacheHandler {
     String Y = "Y";
     byte[] YES = Y.getBytes();
     byte[] NULL = "(nil)".getBytes();
+
+
+    /**
+     * 通用查询方法。
+     */
+    <T> T query(RedisCaller<T> caller);
+
+    /**
+     * 通用执行方法。
+     */
+    void execute(RedisRunner runner);
 
     /**
      * 以对象方式获取对象

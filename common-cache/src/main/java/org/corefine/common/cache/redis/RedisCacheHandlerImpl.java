@@ -33,6 +33,16 @@ public class RedisCacheHandlerImpl implements CacheHandler {
     protected RedisExecuter executer;
 
     @Override
+    public <T> T query(RedisCaller<T> caller) {
+        return executer.query(caller);
+    }
+
+    @Override
+    public void execute(RedisRunner runner) {
+        executer.execute(runner);
+    }
+
+    @Override
     @SuppressWarnings("unchecked")
     public <T> T getObject(String key) {
         byte[] bKey = serializeKey(key);
