@@ -34,8 +34,6 @@
         <version>2.1.5.RELEASE</version>
     </parent>
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>11</java.version>
     </properties>
     <profiles>
@@ -98,5 +96,6 @@
         <module>common-web-websocket</module>
         <module>common-wx</module>
         <module>common-feign</module>
+        <module>common-bom</module>
     </modules>
 </project>
