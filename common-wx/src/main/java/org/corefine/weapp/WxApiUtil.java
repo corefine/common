@@ -18,7 +18,7 @@ import java.util.Map;
 
 public class WxApiUtil {
     private static final Logger logger = LoggerFactory.getLogger(WxApiUtil.class);
-    private static final String JSCODE_2_SESSION = "https://mvc.weixin.qq.com/sns/jscode2session?" +
+    private static final String JSCODE_2_SESSION = "https://api.weixin.qq.com/sns/jscode2session?" +
             "appid=%s&secret=%s&js_code=%s&grant_type=authorization_code";
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
